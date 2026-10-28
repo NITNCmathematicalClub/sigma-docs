@@ -9,7 +9,10 @@ export default defineConfig({
       locales: {
         root: { label: "日本語", lang: "ja" },
       },
-      // sidebar はコンテンツを入れるときに整える。最初は自動生成のままでよい
+      sidebar: [
+        { label: "はじめに", link: "/" },
+        { label: "スタート", items: [{ autogenerate: { directory: "start" } }] },
+      ],
     }),
   ],
 });
