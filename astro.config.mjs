@@ -12,6 +12,7 @@ export default defineConfig({
       sidebar: [
         { label: "はじめに", link: "/" },
         { label: "スタート", items: [{ autogenerate: { directory: "start" } }] },
+        { label: "執筆", items: [{ autogenerate: { directory: "writing" } }] },
       ],
     }),
   ],
