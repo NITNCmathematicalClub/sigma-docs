@@ -13,6 +13,7 @@ export default defineConfig({
         { label: "はじめに", link: "/" },
         { label: "スタート", items: [{ autogenerate: { directory: "start" } }] },
         { label: "執筆", items: [{ autogenerate: { directory: "writing" } }] },
+        { label: "仕様", items: [{ autogenerate: { directory: "spec" } }] },
       ],
     }),
   ],
