@@ -1,35 +1,49 @@
-# sigma-docs
+# Starlight Starter Kit: Basics
 
-沼津高専 数理同好会 部誌『Σ』執筆ドキュメント（チュートリアル・執筆ガイド・仕様）を公開するサイトのリポジトリです。
+[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-## このサイトについて
+```
+npm create astro@latest -- --template starlight
+```
 
-部誌『Σ』の執筆に必要な情報を1か所にまとめます。初めての部員はブラウザで開くだけで、環境構築から最初のプルリクエストまで辿れることを目指します。
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-このサイト自体を、Sigma に関する決定事項の参照元（正）とします。Sigma 本体リポジトリを編集するときは、サイトの仕様ページを参照しながら作業します。仕様を変えるときは、先にサイト側の仕様を更新してから、本体リポジトリへ反映する順序にします。
+## 🚀 Project Structure
 
-## 決定事項
+Inside of your Astro + Starlight project, you'll see the following folders and files:
 
-- 仕組み: Astro Starlight（公式サイトと同じ Astro 系）。Node は 24
-- 公開: GitHub Pages（プロジェクトサイト）。URL は https://sigma.math.nitnc.club を予定
-- デザイン: 公式サイト v2.0.0 のデザイントークンを共有（紺 #27455C / ゴールド #CEA152 / 見出し Noto Serif JP・本文 Noto Sans JP）
-- 内容: チュートリアル、執筆ガイド、判断事例集、仕様（リポジトリ構成・ビルド・CI・入稿）
-- このリポジトリは public です。部内だけにしたい情報は載せないでください
+```
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── content/
+│   │   └── docs/
+│   └── content.config.ts
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
+```
 
-## 進捗管理
+Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
 
-作業は Issue と Milestone で管理します。全体の親 Issue は #14 です。
+Images can be added to `src/assets/` and embedded in Markdown with a relative link.
 
-- v0.1.0 サイト基盤
-- v0.2.0 チュートリアル・執筆ガイド初版
-- v0.3.0 仕様編
-- v1.0.0 公開・運用開始
+Static assets, like favicons, can be placed in the `public/` directory.
 
-## 開発
+## 🧞 Commands
 
-初期設定（Starlight スキャフォールド）の手順は Issue #1 にあります。コミットは、作業がひと区切りついた段階でまとめて行ってください。
+All commands are run from the root of the project, from a terminal:
 
-## 関連リンク
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-- 公式サイト: https://math.nitnc.club
-- 部誌『Σ』本体: https://github.com/NITNCmathematicalClub/Sigma
+## 👀 Want to learn more?
+
+Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
