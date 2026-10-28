@@ -1,40 +1,30 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: はじめに
+description: 部誌『Σ』の執筆ドキュメントの入口。全体の流れと、最初に読むページを案内します。
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+このサイトは、沼津高専 数理同好会の部誌『Σ』の執筆に必要な情報をまとめたドキュメントです。
+初めての部員が、環境構築から最初のプルリクエスト（PR）までを迷わず進められるようにすることを目指しています。
 
-## Next steps
+このサイト自体が、Sigma に関する決定事項の参照元（正）です。
+執筆のルールや仕様が変わるときは、先にこのサイトを更新してから、Sigma 本体のリポジトリへ反映します。
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+## 全体の流れ
+
+Sigma の執筆は、次の順序で進みます。
+
+1. **環境構築** — Git、VS Code、TeX Live 2026 を自分の PC に入れる（Windows を正とした手順を用意しています）
+2. **クイックスタート** — リポジトリを clone して、サンプルをコンパイルし、1行直して PR を出すところまでを通しで体験する
+3. **執筆** — 執筆ルールに沿って原稿を書く。迷ったときは判断事例集を参照する
+4. **校正** — PR で校正を受け、修正する
+5. **入稿** — 編集担当が全体をまとめ、入稿の手順に沿って最終確認を行う
+
+## 最初に読むページ
+
+まずは [執筆クイックスタート](/start/quickstart/) から始めてください。
+環境構築がまだの人は、先に環境構築のページ（作成中）を済ませてから戻ってきてください。
+
+## 困ったときは
+
+- ビルドが通らない、図が出ないなどの症状は「つまずき対処表」（作成中）にまとめていきます
+- このサイトに載っていないことは、編集担当に聞いてください。ほかの部員もつまずきそうな内容であれば、対処表や各ページへの追記を検討します
