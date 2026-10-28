@@ -1,0 +1,109 @@
+/*
+ * 数理同好会 デザイントークン (Figma「1. トークン＆コンポーネント」) を
+ * Starlight のテーマ変数へ適用する。
+ * 方針: フラット (影・立体感なし)。区切りは色の帯と余白で作る。
+ * 色の正は Figma 側。値を変えるときは Figma を先に変えてから、ここへ反映する。
+ */
+
+:root {
+  /* フォント: 見出し・本文とも Noto Sans JP (見出しは Bold) */
+  --sl-font: "Noto Sans JP", sans-serif;
+
+  /* ライトモード (Figma: Palette / Light) */
+  --sl-color-white: #faf9f6; /* bg/base */
+  --sl-color-gray-1: #22303b;
+  --sl-color-gray-2: #1b2833; /* text/primary */
+  --sl-color-gray-3: #5a6b76; /* text/secondary */
+  --sl-color-gray-4: #8a99a3;
+  --sl-color-gray-5: #dcd7ca; /* border */
+  --sl-color-gray-6: #efebe2; /* bg/band */
+  --sl-color-gray-7: #faf9f6; /* bg/base */
+  --sl-color-black: #101d27;
+
+  --sl-color-accent-low: #f3e9d2;
+  --sl-color-accent: #cea152; /* accent/gold */
+  --sl-color-accent-high: #7a5c1e; /* ゴールドを濃くした派生色 (文字として読める濃さ) */
+
+  --sl-color-bg: #faf9f6; /* bg/base */
+  --sl-color-bg-sidebar: #efebe2; /* bg/band: サイドバーは帯の色 */
+  --sl-color-bg-inline-code: #efebe2;
+  --sl-color-hairline-light: #dcd7ca; /* border */
+  --sl-color-hairline: #dcd7ca;
+  --sl-color-hairline-shade: #dcd7ca;
+
+  --sl-shadow-small: none;
+  --sl-shadow-medium: none;
+  --sl-shadow-large: none;
+}
+
+:root[data-theme="dark"] {
+  /* ダークモード (Figma: Palette / Dark) */
+  --sl-color-white: #edf2f5; /* text/primary */
+  --sl-color-gray-1: #edf2f5;
+  --sl-color-gray-2: #d7e1e7;
+  --sl-color-gray-3: #a7b6c0; /* text/secondary */
+  --sl-color-gray-4: #5f7684;
+  --sl-color-gray-5: #2e4a5c; /* border */
+  --sl-color-gray-6: #1b3245; /* bg/band */
+  --sl-color-gray-7: #101d27; /* bg/base */
+  --sl-color-black: #0a141c;
+
+  --sl-color-accent-low: #40381f;
+  --sl-color-accent: #d9b877; /* accent/gold (ダーク) */
+  --sl-color-accent-high: #ebd9a8;
+
+  --sl-color-bg: #101d27; /* bg/base */
+  --sl-color-bg-sidebar: #1b3245; /* bg/band */
+  --sl-color-bg-inline-code: #1b3245;
+  --sl-color-hairline-light: #2e4a5c; /* border */
+  --sl-color-hairline: #2e4a5c;
+  --sl-color-hairline-shade: #2e4a5c;
+}
+
+/* 見出し: Noto Sans JP Bold、色はブランドの紺 (ダークでは本文色) */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.content-panel h1 {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+:root:not([data-theme="dark"]) .sl-markdown-content h1,
+:root:not([data-theme="dark"]) .sl-markdown-content h2,
+:root:not([data-theme="dark"]) .sl-markdown-content h3,
+:root:not([data-theme="dark"]) .content-panel h1 {
+  color: #27455c; /* brand/navy */
+}
+
+/*
+ * ヘッダー: 公式サイトの Header コンポーネント (Figma) の適用。
+ * 地色 82% の半透明 + 背景ブラー 8px、下端に border のヘアライン。
+ * サイトタイトルは Noto Serif JP Bold、色は brand/navy。
+ */
+.header {
+  background-color: rgba(250, 249, 246, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+:root[data-theme="dark"] .header {
+  background-color: rgba(16, 29, 39, 0.82);
+}
+.site-title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  color: #27455c; /* brand/navy */
+}
+:root[data-theme="dark"] .site-title {
+  color: #edf2f5;
+}
+
+/* カードとボタン: 角丸 8px、影なし (Figma の検討中値を採用) */
+.sl-card,
+.card {
+  border-radius: 8px;
+  box-shadow: none;
+}
+.sl-link-button {
+  border-radius: 8px;
+}
