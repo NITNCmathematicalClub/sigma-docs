@@ -1,0 +1,83 @@
+---
+/*
+ * 公式サイトの Footer コンポーネント (Figma) を Starlight に適用したもの。
+ * Starlight 標準のフッター要素 (更新日・編集リンク・前後ページ) は残し、
+ * その下に部共通のフッターバンドを追加する。
+ * 色: 地はダークの bg/base #101D27、区切り線 #33505F、
+ * 補足テキスト #A7B6C0、コピーライト #7E93A0。
+ */
+import EditLink from "@astrojs/starlight/components/EditLink.astro";
+import LastUpdated from "@astrojs/starlight/components/LastUpdated.astro";
+import Pagination from "@astrojs/starlight/components/Pagination.astro";
+---
+
+<div class="sl-footer-default">
+  <div class="meta sl-flex">
+    <LastUpdated />
+    <EditLink />
+  </div>
+  <Pagination />
+</div>
+
+<footer class="club-footer">
+  <div class="club-footer-inner">
+    <p class="club-name">数理同好会</p>
+    <p class="club-sub">沼津工業高等専門学校 数理同好会</p>
+    <p class="club-links">
+      <a href="https://math.nitnc.club/">公式サイト</a>
+      <span>このサイトは部誌『Σ』の執筆ドキュメントです</span>
+    </p>
+    <div class="club-divider"></div>
+    <p class="club-copy">© 2026 Numazu Kosen Mathematics Club</p>
+  </div>
+</footer>
+
+<style>
+  .sl-footer-default {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .meta {
+    gap: 0.75rem 3rem;
+    flex-wrap: wrap;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+  }
+  .club-footer {
+    margin-top: 3rem;
+    background-color: #101d27;
+    color: #a7b6c0;
+    padding: 2.75rem 1.5rem 2rem;
+  }
+  .club-name {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #ffffff;
+    margin: 0;
+  }
+  .club-sub {
+    font-size: 0.75rem;
+    margin: 0.5rem 0 0;
+  }
+  .club-links {
+    font-size: 0.75rem;
+    margin: 1rem 0 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .club-links a {
+    color: #a7b6c0;
+  }
+  .club-divider {
+    border-top: 1px solid #33505f;
+    margin: 1.5rem 0 1rem;
+  }
+  .club-copy {
+    font-size: 0.6875rem;
+    color: #7e93a0;
+    margin: 0;
+  }
+</style>
